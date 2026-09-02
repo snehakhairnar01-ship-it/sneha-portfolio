@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sneha Khairnar | Portfolio</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a, #020617);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        section {
+            padding: 80px 10%;
+            scroll-margin-top: 70px;
+        }
+
+        h1,
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: #020617;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        header h2 {
+            color: #38bdf8;
+            margin-bottom: 0;
+        }
+
+        /* ================= NAVIGATION ================= */
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* ================= HAMBURGER ================= */
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+            gap: 40px;
+            padding-top: 100px;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+        }
+
+        .hero-text span {
+            color: #38bdf8;
+        }
+
+        .hero-text h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            margin: 20px 0;
+            max-width: 550px;
+            color: #cbd5e1;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #38bdf8;
+            color: #000;
+            border-radius: 30px;
+            text-decoration: none;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0ea5e9;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .hero img {
+            width: 300px;
+            max-width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .about p {
+            color: #cbd5e1;
+        }
+
+        /* ================= SKILLS ================= */
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .skill-card i {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #38bdf8;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            background: #334155;
+        }
+
+        /* ================= EXPERIENCE ================= */
+
+        .timeline {
+            border-left: 2px solid #38bdf8;
+            padding-left: 20px;
+        }
+
+        .timeline div {
+            margin-bottom: 25px;
+        }
+
+        .timeline h3 {
+            margin-bottom: 5px;
+        }
+
+        .timeline p {
+            color: #cbd5e1;
+        }
+
+        /* ================= EDUCATION ================= */
+
+        .education-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .education-card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+            border-left: 3px solid #38bdf8;
+        }
+
+        .education-card:hover {
+            transform: translateY(-8px);
+            background: #334155;
+        }
+
+        .education-card i {
+            font-size: 28px;
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .education-card h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .education-card p {
+            margin: 5px 0;
+            color: #cbd5e1;
+        }
+
+        .education-year {
+            color: #38bdf8 !important;
+            font-weight: 600;
+        }
+
+        /* ================= PROJECTS ================= */
+
+        .projects-container {
+            display: grid;
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            background: #334155;
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            margin-bottom: 8px;
+        }
+
+        /* ================= HIGHLIGHTS ================= */
+
+        .highlights ul {
+            list-style: none;
+        }
+
+        .highlights li {
+            margin: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .highlights li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #38bdf8;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px 0;
+        }
+
+        .contact i {
+            color: #38bdf8;
+            margin-right: 8px;
+        }
+
+        .contact a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+            margin-top: 30px;
+        }
+
+        footer p {
+            color: #94a3b8;
+        }
+
+        /* ================= MODAL ================= */
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 600px;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+
+        .close {
+            float: right;
+            cursor: pointer;
+            font-size: 25px;
+        }
+
+        .close:hover {
+            color: #38bdf8;
+        }
+
+        .modal h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #38bdf8;
+        }
+
+        .modal p {
+            color: #cbd5e1;
+        }
+
+        .modal ul {
+            margin-left: 20px;
+            color: #cbd5e1;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 768px) {
+
+            section {
+                padding: 70px 5%;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: #020617;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+                padding: 15px;
+                width: 100%;
+                text-align: center;
+                border-top: 1px solid #1e293b;
+                margin: 0;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .hero img {
+                width: 200px;
+                order: -1;
+            }
+
+            .hero-text h1 {
+                font-size: 34px;
+            }
+
+            .hero-text h2 {
+                font-size: 23px;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .contact {
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .hero-text h1 {
+                font-size: 27px;
+            }
+
+            .hero-text h2 {
+                font-size: 20px;
+            }
+
+            .btn {
+                padding: 10px 18px;
+                font-size: 13px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            .education-card h3 {
+                font-size: 18px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <h2>Sneha</h2>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav id="navMenu">
+            <a href="#about" onclick="closeMenu()">About</a>
+            <a href="#skills" onclick="closeMenu()">Skills</a>
+            <a href="#experience" onclick="closeMenu()">Experience</a>
+            <a href="#education" onclick="closeMenu()">Education</a>
+            <a href="#projects" onclick="closeMenu()">Projects</a>
+            <a href="#contact" onclick="closeMenu()">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>
+                Hi, I'm <span>Sneha Khairnar</span>
+            </h1>
+
+            <h2>Front-End Developer</h2>
+
+            <p>
+                I build responsive, modern, and user-friendly web interfaces
+                with a strong focus on UI/UX, performance, and eCommerce
+                experiences.
+            </p>
+
+            <a href="#projects" class="btn">
+                View Projects
+            </a>
+
+            <a href="#contact" class="btn">
+                Contact Me
+            </a>
+
+            <a href="Sneha_Khairnar_Resume.pdf" class="btn" download>
+                Download Resume
+            </a>
+
+        </div>
+
+        <img src="myprofile.png" alt="Sneha Khairnar">
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+           Front-End Developer with 2.5+ years of experience building responsive, user-friendly web interfaces and eCommerce solutions. Experienced in HTML, CSS, JavaScript, Shopify, Liquid, and responsive UI development, with a strong understanding of modern web design and usability. I focus on creating clean, high-quality interfaces that deliver seamless user experiences across desktop and mobile devices.
+        </p>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+
+        <h2>Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill-card">
+                <i class="fab fa-html5"></i>
+                <p>HTML5</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fab fa-css3-alt"></i>
+                <p>CSS3</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fab fa-js"></i>
+                <p>JavaScript</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Shopify</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <p>Liquid</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fab fa-react"></i>
+                <p>React</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fab fa-bootstrap"></i>
+                <p>Bootstrap</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fab fa-git-alt"></i>
+                <p>Git</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-mobile-screen"></i>
+                <p>Responsive Design</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fab fa-figma"></i>
+                <p>Figma</p>
+            </div>
+          <div class="skill-card">
+    <i class="fas fa-arrows-rotate"></i>
+    <p>Agile Methodology</p>
+</div>
+
+        <!-- NEW SKILL -->
+        <div class="skill-card">
+            <i class="fas fa-pen-ruler"></i>
+            <p>UI/UX Design</p>
+        </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EXPERIENCE ================= -->
+
+    <section id="experience">
+
+        <h2>Experience</h2>
+
+        <div class="timeline">
+
+            <div>
+
+                <h3>Front-End Developer - Accenture</h3>
+
+                <p>
+                    2024 - Present
+                </p>
+
+                <p>
+                    Developed responsive web interfaces, customized Shopify
+                    themes, worked with HTML, CSS, JavaScript and Liquid,
+                    improved UI performance, and resolved cross-browser
+                    compatibility issues.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section id="education">
+
+        <h2>Education</h2>
+
+        <div class="education-container">
+
+            <!-- Master's -->
+
+            <div class="education-card">
+
+                <i class="fas fa-graduation-cap"></i>
+
+                <h3>
+                    Master of Science in Computer Applications
+                </h3>
+
+                <p>
+                    Ashoka Center, Nashik
+                </p>
+
+                <p class="education-year">
+                    2022 - 2024
+                </p>
+
+                <p>
+                    Percentage: 72.50%
+                </p>
+
+            </div>
+
+
+            <!-- Bachelor's -->
+
+            <div class="education-card">
+
+                <i class="fas fa-graduation-cap"></i>
+
+                <h3>
+                    Bachelor of Computer Science
+                </h3>
+
+                <p>
+                    Savitribai Phule Pune University (SPPU), Pune
+                </p>
+
+                <p class="education-year">
+                    2018 - 2021
+                </p>
+
+                <p>
+                    Percentage: 73.08%
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+        <h2>Projects</h2>
+
+        <div class="projects-container">
+
+            <div class="project-card">
+
+               <h3>eCommerce Front-End Modernization</h3>
+
+<p>
+    Worked on an enterprise Shopify eCommerce platform, developing
+    responsive interfaces, product pages, cart experience, and
+    checkout enhancements with a focus on usability and performance.
+</p>
+
+<p>
+    <strong>Technologies:</strong>
+    HTML5, CSS3, JavaScript, Shopify, Liquid
+</p>
+
+<button class="btn" onclick="openModal()">
+    View Details
+</button>
+
+<p>
+    <em>
+        Project details cannot be shared publicly due to client
+        confidentiality.
+    </em>
+</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HIGHLIGHTS ================= -->
+
+    <section class="highlights">
+
+        <h2>Highlights</h2>
+
+        <ul>
+
+            <li>
+                2.5+ Years of Front-End Development Experience
+            </li>
+
+            <li>
+                Experience working on enterprise eCommerce projects
+            </li>
+
+            <li>
+                Shopify Theme Customization & Liquid Development
+            </li>
+
+            <li>
+                Responsive and Mobile-First UI Development
+            </li>
+
+            <li>
+                Strong HTML5, CSS3 & JavaScript Skills
+            </li>
+
+            <li>
+                UI/UX-Focused and User-Friendly Interface Development
+            </li>
+            <li>
+                Cross-Browser Compatibility & Front-End Optimization
+            </li>
+            <li>
+                Agile Development & Cross-Functional Collaboration
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+   <!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact">
+
+    <h2>Contact</h2>
+
+    <p>
+        <i class="fas fa-map-marker-alt"></i>
+        Pune, India
+    </p>
+
+    <p>
+        <i class="fas fa-phone"></i>
+        <a href="tel:+919130827179">
+            +91-9130827179
+        </a>
+    </p>
+
+    <p>
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:sneha.khairnar01@gmail.com">
+            sneha.khairnar01@gmail.com
+        </a>
+    </p>
+
+    <p>
+        <i class="fab fa-linkedin"></i>
+        <a
+            href="https://www.linkedin.com/in/sneha-khairnar-7072193b0"
+            target="_blank"
+            rel="noopener noreferrer">
+            LinkedIn Profile
+        </a>
+    </p>
+     <p class="contact-note">
+        Open to Front-End Developer, Shopify Developer, and UI/UX opportunities.
+    </p>
+
+</section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Sneha Khairnar | Portfolio
+        </p>
+
+    </footer>
+
+
+    <!-- ================= PROJECT MODAL ================= -->
+
+    <div id="projectModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal()">
+                &times;
+            </span>
+
+            <h2>
+                Project Details
+            </h2>
+
+            <p>
+
+               Worked on an enterprise-level Shopify eCommerce platform, developing and customizing responsive user interfaces using HTML5, CSS3, JavaScript, and Liquid. Contributed to product pages, collection pages, cart experience, and checkout enhancements with a focus on usability, responsiveness, and front-end performance. Ensured cross-browser compatibility and collaborated with design and backend teams in an Agile environment.
+            </p>
+
+
+            <h3>
+                My Contribution
+            </h3>
+
+            <ul>
+
+                <li>
+                    Developed responsive UI using Flexbox and CSS Grid
+                </li>
+
+                <li>
+                    Customized Shopify themes using Liquid
+                </li>
+
+                <li>
+                    Developed and enhanced product, collection, and cart interfaces
+                </li>
+
+                <li>
+                    Implemented responsive layouts across different screen sizes
+                </li>
+
+                <li>
+                    Optimized front-end performance and UI rendering
+                </li>
+
+                <li>
+                    Resolved cross-browser compatibility and UI issues
+                </li>
+                
+                <li>
+                    Collaborated with design and backend teams in an Agile environment
+                </li>
+            </ul>
+
+
+            <h3>
+                Key Features
+            </h3>
+
+            <ul>
+
+                <li>
+                    Mobile-first responsive design
+                </li>
+
+                <li>
+                    Shopify eCommerce Interface
+                </li>
+
+                <li>
+                    Product and collection pages
+                </li>
+
+                <li>
+                    Cart and checkout experience
+                </li>
+
+                <li>
+                    Scalable UI components
+                </li>
+
+                <li>
+                    Cross-browser compatibility
+                </li>
+                <li>
+                    User-focused and responsive layouts
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        function openModal() {
+            document.getElementById("projectModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("projectModal").style.display = "none";
+        }
+
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("active");
+        }
+
+        function closeMenu() {
+            document.getElementById("navMenu").classList.remove("active");
+        }
+
+        // Close modal when clicking outside the modal content
+
+        window.onclick = function(event) {
+
+            const modal = document.getElementById("projectModal");
+
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+
+        };
+
+    </script>
+
+</body>
+
+</html>
